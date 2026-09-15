@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Uniformes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .uniforme {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            height: 400px;
+            object-fit: cover;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .uniforme img {
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .uniforme h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .uniforme p {
+            font-size: 14px;
+            color: #555;
+        }
+        .uniforme:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efecto al pasar el cursor */
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .galeria {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .galeria img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .galeria:target {
+            display: flex;
+        }
+        .galeria .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .galeria .thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .galeria .thumbnails img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; padding: 20px; background: #333; color: #fff;">
+            <img src="logo.png" alt="Casa suministros" style="height: 50px; margin-right: 15px;">
+            <h1>Catálogo de Uniformes</h1>
+        </div>
+    </header>
+    <main class="catalogo">
+        <a href="#melany" class="uniforme" >
+            <h3>Melany</h3>
+            <p>Precio: $149.000</p>
+            <p>Tallas: S-M-L-XL-XXL</p>
+            <img src="melany/melany.png" alt="Melany">
+        </a>
+        <a href="#karol" class="uniforme" >
+            <h3>Karol</h3>
+            <p>Precio: $110.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL-3XL</p>
+            <img src="karol/karol.png" alt="Karol">
+        </a>
+        <a href="#nathy" class="uniforme" >
+            <h3>Nathy</h3>
+            <p>Precio: $110.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL-3XL</p>
+            <img src="nathy/nathy.png" alt="Nathy">
+        </a>
+        <a href="#nhia" class="uniforme" >
+            <h3>Nhia</h3>
+            <p>Precio: $130.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL</p>
+            <img src="nhia/nhia.png" alt="Nhia">
+        </a>
+        <a href="#monaco" class="uniforme" >
+            <h3>Monaco</h3>
+            <p>Precio: $130.000</p>
+            <p>Tallas: S-M-L-XL-XXL</p>
+            <img src="monaco/monaco.png" alt="Monaco">
+        </a>
+        <a href="#greta" class="uniforme" >
+            <h3>Greta</h3>
+            <p>Precio: $78.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL</p>
+            <img src="greta/greta.png" alt="Greta">
+        </a>
+        <a href="#andrew" class="uniforme" >
+            <h3>Andrew</h3>
+            <p>Precio: $135.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL</p>
+            <img src="andrew/andrew.png" alt="Andrew">
+        </a>
+        <a href="#maxi" class="uniforme" >
+            <h3>Unisex licrado</h3>
+            <p>Precio: $115.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL</p>
+            <img src="maxi/maxi.png" alt="Unisex licrado">
+        </a>
+        <a href="#unisex" class="uniforme" >
+            <h3>Unisex rigido</h3>
+            <p>Precio: $73.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL-XXXL</p>
+            <img src="unix/unisex rigido.png" alt="Unisex rigido">
+        </a>
+        <a href="#enfermera" class="uniforme" >
+            <h3>Vestido enfermera</h3>
+            <p>Precio: $120.000</p>
+            <p>Tallas: XS-S-M-L-XL-XXL</p>
+            <img src="enfermera/enfermera.png" alt="Vestido enfermera">
+        </a>
+
+        <div id="melany" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="melany/melany.png" alt="Melany 1">
+            <div class="thumbnails">
+                <a href="melany/melany.png"><img src="melany/melany.png" alt="Melany 1"></a>
+                <a href="melany/melany2.png"><img src="melany/melany2.png" alt="Melany 2"></a>
+                
+            </div>
+        </div>
+       
+        <div id="karol" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="karol/karol" alt="Karol 1">
+            <div class="thumbnails">
+                <a href="karol/karol.png"><img src="karol/karol.png" alt="Karol 1"></a>
+                <a href="karol/karol2.png"><img src="karol/karol2.png" alt="Karol 2"></a>
+                <a href="karol/karol3.png"><img src="karol/karol3.png" alt="Karol 3"></a>
+            </div>
+        </div>
+       
+        <div id="nathy" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="nathy/nathy.png" alt="Nathy 1">
+            <div class="thumbnails">
+                <a href="nathy/nathy.png"><img src="nathy/nathy.png" alt="Karol 1"></a>
+                <a href="nathy/nathy2.png"><img src="nathy/nathy2.png" alt="Karol 2"></a>
+            </div>
+        </div>
+
+        <div id="nhia" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="nhia/nhia.png" alt="Nhia 1">
+            <div class="thumbnails">
+                <a href="nhia/nhia.png"><img src="nhia/nhia.png" alt="Nhia 1"></a>
+                <a href="nhia/nhia2.png"><img src="nhia/nhia2.png" alt="Nhia 2"></a>
+                <a href="nhia/nhia3.png"><img src="nhia/nhia3.png" alt="Nhia 3"></a>
+            </div>
+        </div>
+     
+        <div id="monaco" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="monaco/monaco.png" alt="Monaco 1">
+            <div class="thumbnails">
+            <a href="monaco/monaco.png"><img src="monaco/monaco.png" alt="Monaco 1"></a>
+            <a href="monaco/monaco2.png"><img src="monaco/monaco2.png" alt="Monaco 2"></a>
+            </div>
+        </div>
+        <div id="greta" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="greta/greta.png" alt="Greta 1">
+            <div class="thumbnails">
+            <a href="greta/greta.png"><img src="greta/greta.png" alt="Greta 1"></a>
+            <a href="greta/greta2.png"><img src="greta/greta2.png" alt="Greta 2"></a>
+            </div>
+        </div>
+        <div id="andrew" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="andrew/andrew.png" alt="Andrew 1">
+            <div class="thumbnails">
+            <a href="andrew/andrew.png"><img src="andrew/andrew.png" alt="Andrew 1"></a>
+            <a href="andrew/andrew2.png"><img src="andrew/andrew2.png" alt="Andrew 2"></a>
+            <a href="andrew/andrew3.png"><img src="andrew/andrew3.png" alt="Andrew 3"></a>
+            </div>
+        </div>
+        <div id="maxi" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="maxi/maxi.png" alt="Maxi 1">
+            <div class="thumbnails">
+            <a href="maxi/maxi.png"><img src="maxi/maxi.png" alt="Maxi 1"></a>
+            <a href="maxi/maxi2.png"><img src="maxi/maxi2.png" alt="Maxi 2"></a>
+            </div>
+        </div>
+        <div id="unisex" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="unix/unisex rigido.png" alt="Unisex rigido 1">
+            <div class="thumbnails">
+            <a href="unix/unisex rigido.png"><img src="unix/unisex rigido.png" alt="Unisex rigido 1"></a>
+            <a href="unix/unisex2.png"><img src="unix/unisex2.png" alt="Unisex rigido 2"></a>
+            <a href="unix/unisex3.png"><img src="unix/unisex3.png" alt="Unisex rigido 3"></a>
+            </div>
+        </div>
+        <div id="enfermera" class="galeria">
+            <a href="#" class="close">&times;</a>
+            <img src="enfermera/enfermera.png" alt="Enfermera 1">
+            <div class="thumbnails">
+            <a href="enfermera/enfermera.png"><img src="enfermera/enfermera.png" alt="Enfermera 1"></a>
+            <a href="enfermera/enfermera2.png"><img src="enfermera/enfermera2.png" alt="Enfermera 2"></a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
